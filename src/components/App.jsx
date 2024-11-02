@@ -33,13 +33,16 @@ function App() {
       bad: 0,
     });
   };
+  const totalFeedback = good + neutral + bad;
+	const positiveFeedback = totalFeedback > 0 ? Math.round((reviews.good / totalFeedback) * 100) : 0;
 
   return (
     <div className='container'>
       <Description />
       <Options onLeaveFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
       {totalFeedback > 0
-        ? <Feedback valueFeedBack={feedback} totalFeedback={totalFeedback} />
+        ? <Feedback valueFeedBack={feedback} totalFeedback={totalFeedback}
+        positiveFeedback={positiveFeedback} />
         : <Notification />}
     </div>
   );
