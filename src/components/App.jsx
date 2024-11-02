@@ -33,8 +33,8 @@ function App() {
       bad: 0,
     });
   };
-  const totalFeedback = good + neutral + bad;
-	const positiveFeedback = totalFeedback > 0 ? Math.round((reviews.good / totalFeedback) * 100) : 0;
+
+	const positiveFeedback = totalFeedback > 0 ? Math.round((good / totalFeedback) * 100) : 0;
 
   return (
     <div className='container'>
