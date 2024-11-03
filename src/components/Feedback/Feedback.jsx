@@ -7,7 +7,7 @@ export default function Feedback({ valueFeedBack, totalFeedback }) {
       <li className={css.feedback_stats}>Neutral: <span>{valueFeedBack.neutral }</span></li>
       <li className={css.feedback_stats}>Bad: <span>{valueFeedBack.bad}</span></li>
       <li className={css.feedback_stats}>Total: <span>{ totalFeedback }</span></li>
-      <li className={css.feedback_stats}>Positive: <span>{valueFeedBack.positive } </span></li>
+      <li className={css.feedback_stats}>Positive: <span>{valueFeedBack.positive }% </span></li>
     </ul>
   )
 }
